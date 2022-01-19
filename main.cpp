@@ -47,8 +47,9 @@ template <typename T> class BinTree{
 				inorderPrint(leaf->left);
 				cout<<leaf->data<<"  ";
 				inorderPrint(leaf->right);
-			}else{
-				cout<<" There is no element";
+			}
+			if(length==0){
+				cout<<"There isn't element to print";
 			}
 		}
 		void postorderPrint(Node<T> *leaf){
@@ -56,8 +57,9 @@ template <typename T> class BinTree{
 				inorderPrint(leaf->left);
 				inorderPrint(leaf->right);
 				cout<<leaf->data<<"  ";
-			}else{
-				cout<<" There is no element";
+			}
+			if(length==0){
+				cout<<"There isn't element to print";
 			}
 		}
 		void preoderPrint(Node<T> *leaf){
@@ -65,8 +67,9 @@ template <typename T> class BinTree{
 				cout<<leaf->data<<"  ";
 				inorderPrint(leaf->left);
 				inorderPrint(leaf->right);
-			}else{
-				cout<<" There is no element";
+			}
+			if(length==0){
+				cout<<"There isn't element to print";
 			}
 		}
 		Node<T> *search(T key,Node<T> *leaf){
